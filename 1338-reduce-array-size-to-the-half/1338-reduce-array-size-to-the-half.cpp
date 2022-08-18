@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minSetSize(vector<int>& arr) {
+        ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
         unordered_map<int, int> m;
         priority_queue<int> pq;
         int n = arr.size();
