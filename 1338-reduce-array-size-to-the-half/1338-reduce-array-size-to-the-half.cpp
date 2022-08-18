@@ -2,15 +2,11 @@ class Solution {
 public:
     int minSetSize(vector<int>& arr) {
         unordered_map<int, int> m;
+        priority_queue<int> pq;
         int n = arr.size();
         
         for(int i = 0; i < n; i++) ++m[arr[i]];
-        
-        priority_queue<int> pq;
-        
-        for(auto it: m){
-            pq.push(it.second);
-        }
+        for(auto it: m) pq.push(it.second);
         
         int ans = 0, sum = 0;
         
