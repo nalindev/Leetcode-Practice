@@ -1,6 +1,6 @@
 class Solution {
 public:
-  char cycle(char ch, int n){
+  char cycle(char &ch, int n){
         int nv = int(ch) + (n%26);
         if(nv<'a') nv += 26;
         if(nv>'z') nv -= 26;
@@ -23,7 +23,6 @@ public:
         }
         
         for(int i = 0; i < n; i++){
-            cout << v[i] << " ";
             s[i] = cycle(s[i], v[i]);
         }
         
