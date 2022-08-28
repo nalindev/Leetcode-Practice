@@ -7,7 +7,7 @@ public:
         for(int i = s.length()-1; i >= 0; i--){
             if(s[i] == '*') ++count;
             else if(count != 0) --count;
-            else ans+=s[i];
+            else ans.push_back(s[i]);
         }
         
         reverse(ans.begin(), ans.end());
