@@ -2,8 +2,6 @@ class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
         
-        //reverse(matrix.begin(), matrix.end());
-        
         int l = 0, r = matrix.size()-1;
         while(l < r){
             swap(matrix[l], matrix[r]);
