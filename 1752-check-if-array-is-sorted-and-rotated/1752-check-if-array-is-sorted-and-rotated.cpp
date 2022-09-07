@@ -8,7 +8,6 @@ public:
                 mn = nums[i];
                 pos = i;
             }
-            
         }
         
         for(int i = pos; i < n + pos - 1; i++){
