@@ -1,6 +1,8 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
+        ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+        
         // int f = 0, s = 0, n = nums.size();
         // while(s < n){
         //     if(nums[f] == nums[s]){
@@ -31,10 +33,11 @@ public:
         // }
         // return n-count;
         
+        //another concepts to know
         int i = !nums.empty();
-    for (int n : nums)
-        if (n > nums[i-1])
+        for (int n : nums)
+            if (n > nums[i-1])
             nums[i++] = n;
-    return i;
+        return i;
     }
 };
