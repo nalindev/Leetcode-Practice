@@ -24,11 +24,17 @@ public:
         //return f+1;
         
         //looking for other solution - This code have better approach then me but complexity is same 
-        int count = 0, n = nums.size();
-        for(int i = 1; i < n; i++){
-            if(nums[i] == nums[i-1]) count++;
-            else nums[i-count] = nums[i];
-        }
-        return n-count;
+        // int count = 0, n = nums.size();
+        // for(int i = 1; i < n; i++){
+        //     if(nums[i] == nums[i-1]) count++;
+        //     else nums[i-count] = nums[i];
+        // }
+        // return n-count;
+        
+        int i = !nums.empty();
+    for (int n : nums)
+        if (n > nums[i-1])
+            nums[i++] = n;
+    return i;
     }
 };
