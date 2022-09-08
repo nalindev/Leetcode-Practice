@@ -6,13 +6,12 @@ public:
         while(s < n){
             if(nums[f] == nums[s]){
                 ++s;
-            }else if(nums[f] != nums[s]){
+            }else{
                 nums[f+1] = nums[s];
                 ++f;
                 ++s;
             }
-        }
-        
+        } 
         return f+1;
     }
 };
