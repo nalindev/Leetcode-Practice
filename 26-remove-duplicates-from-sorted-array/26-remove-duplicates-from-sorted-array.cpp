@@ -16,14 +16,14 @@ public:
         //return f+1;
         
         //optimized it further but the running time is still same
-        // int f = 0, s = 0, n = nums.size();
-        // for(int i = 0; i < n; i++){
-        //     if(nums[f] != nums[i]){
-        //         nums[f+1] = nums[i];
-        //         ++f;
-        //     }
-        // }
-        //return f+1;
+        int f = 0, s = 0, n = nums.size();
+        for(int i = 0; i < n; i++){
+            if(nums[f] != nums[i]){
+                nums[f+1] = nums[i];
+                ++f;
+            }
+        }
+        return f+1;
         
         //looking for other solution - This code have better approach then me but complexity is same 
         // int count = 0, n = nums.size();
@@ -33,11 +33,5 @@ public:
         // }
         // return n-count;
         
-        //another concepts to know
-        int i = !nums.empty();
-        for (int n : nums)
-            if (n > nums[i-1])
-            nums[i++] = n;
-        return i;
     }
 };
