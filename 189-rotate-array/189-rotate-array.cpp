@@ -27,7 +27,7 @@ public:
         
         //O(n) Time & 0(1) memory
         int n = nums.size();
-        k = k%n;
+        k %= n;
         reverse(0, n-1, nums);
         reverse(0, k-1, nums);
         reverse(k, n-1, nums);
