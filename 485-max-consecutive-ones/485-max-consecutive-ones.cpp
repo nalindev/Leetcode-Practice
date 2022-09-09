@@ -10,7 +10,7 @@ public:
                 count = 0;
             }
         }
-        ans = max(ans, count);
+        if(count) ans = max(ans, count);
         return ans;
     }
 };
