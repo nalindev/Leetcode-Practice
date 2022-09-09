@@ -10,19 +10,26 @@ public:
 //         }
 //     }
     
+    void reverse(int start, int last, vector<int> &nums){
+        while(start < last){
+            swap(nums[start], nums[last]);
+            start++;
+            last--;
+        }
+    }
+    
     void rotate(vector<int>& nums, int k) {
-        //while(k--) cycle(nums, nums.size());
-        
         //O(n) time & o(n) space
-        int n = nums.size();
-        vector<int> v(n);
-        
-        for(int i = 0; i < n; i++) v[(i+k)%n] = nums[i];
-        
-        for(int i = 0; i < n; i++) nums[i] = v[i]; 
-        
+        //int n = nums.size();
+        //vector<int> v(n);
+        //for(int i = 0; i < n; i++) v[(i+k)%n] = nums[i];
+        //for(int i = 0; i < n; i++) nums[i] = v[i]; 
         
         //O(n) Time & 0(1) memory
-        
+        int n = nums.size();
+        k = k%n;
+        reverse(0, n-1, nums);
+        reverse(0, k-1, nums);
+        reverse(k, n-1, nums);
     }
 };
