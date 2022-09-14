@@ -16,7 +16,7 @@ public:
             if(i - left + 1 > ans)
                 ans = i - left + 1;
         }
-        
+     
         return ans;
     }
 };
