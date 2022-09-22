@@ -9,7 +9,8 @@ public:
             if(s[i] - s[i-1] == 1) ++temp;
             else temp = 1;
             
-            ans = max(ans, temp);
+            //ans = max(ans, temp);
+            if(ans < temp) ans = temp;
         }
         
         return ans;
